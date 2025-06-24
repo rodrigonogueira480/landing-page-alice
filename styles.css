@@ -661,32 +661,41 @@ body {
     transform: translateY(-3px);
 }
 
-.contact-form {
+.whatsapp-contact {
     background: var(--white);
-    padding: 2rem;
+    padding: 3rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    text-align: center;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+.whatsapp-contact h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid var(--accent-color);
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
     border-radius: var(--border-radius);
-    font-family: inherit;
-    font-size: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
     transition: var(--transition);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
+.whatsapp-button:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.whatsapp-button i {
+    font-size: 1.5rem;
 }
 
 .final-cta {
