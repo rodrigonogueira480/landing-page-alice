@@ -45,7 +45,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0rem 1rem;
+    max-width: 1400px;
 }
 
 .nav-brand {
@@ -137,15 +138,15 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
+    padding: 140px 0 80px;
     background: linear-gradient(135deg, var(--background-color) 0%, var(--accent-color) 100%);
 }
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 1fr 400px;
+    column-gap: 3rem;
+    align-items: start;
 }
 
 .hero h1 {
@@ -154,12 +155,14 @@ body {
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    text-align: center;
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
     color: var(--text-light);
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .professional-info {
@@ -188,9 +191,10 @@ body {
 
 .hero-cta {
     background: var(--white);
-    padding: 2rem;
+    padding: 2rem 8rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    text-align: center;
 }
 
 .hero-cta h4 {
@@ -206,7 +210,7 @@ body {
 
 .hero-image img {
     width: 100%;
-    height: 500px;
+    height: 570px;
     object-fit: cover;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
