@@ -143,9 +143,20 @@ body {
 }
 
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.hero-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-main {
     display: grid;
     grid-template-columns: 1fr 400px;
-    column-gap: 3rem;
+    gap: 3rem;
     align-items: start;
 }
 
@@ -229,11 +240,26 @@ body {
     margin-bottom: 3rem;
 }
 
+.problems-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
 .problems-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.problems-grid-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .problem-item {
@@ -796,13 +822,23 @@ body {
         font-size: 2rem;
     }
     
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .professional-info {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+    
+    .hero-cta {
+        padding: 2rem;
     }
     
     .about-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
     
     .contact-content {
@@ -822,6 +858,7 @@ body {
     }
     
     .problems-grid,
+    .problems-grid-center,
     .benefits-grid,
     .values-grid,
     .testimonials-grid,
@@ -836,7 +873,7 @@ body {
     }
     
     .hero {
-        padding: 100px 0 60px;
+        padding: 120px 0 60px;
     }
     
     .hero h1 {
@@ -847,7 +884,17 @@ body {
         font-size: 1rem;
     }
     
-    .professional-info,
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .professional-info {
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
+    }
+    
     .hero-cta {
         padding: 1.5rem;
     }
@@ -858,5 +905,13 @@ body {
     
     h2 {
         font-size: 2rem;
+    }
+    
+    .nav-brand .logo {
+        height: 80px;
+    }
+    
+    .footer-brand .footer-logo {
+        height: 80px;
     }
 }
