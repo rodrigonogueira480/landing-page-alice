@@ -170,9 +170,8 @@ body {
 .hero-image::before {
     content: '';
     position: absolute;
-    width: 320px;
-    width: 320px;
-    height: 320px;
+    width: 220px;
+    height: 220px;
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
     border-radius: 50%;
     z-index: 1;
@@ -180,14 +179,15 @@ body {
 }
 
 .hero-image img {
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center 15%;
     position: relative;
     z-index: 2;
-    border: 8px solid var(--white);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 6px solid var(--white);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
 }
 
@@ -403,16 +403,64 @@ body {
 }
 
 .solution {
-    text-align: center;
     margin: 4rem 0;
+}
+
+.solution h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.solution-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+    align-items: center;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.solution-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-color), var(--secondary-color));
+}
+
+.solution-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .solution-text {
     font-size: 1.3rem;
     color: var(--text-dark);
-    max-width: 800px;
-    margin: 0 auto;
     font-weight: 500;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.solution-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.solution-image:hover {
+    transform: scale(1.05);
 }
 
 .benefits h3 {
@@ -812,6 +860,10 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .whatsapp-contact h3 {
@@ -1015,6 +1067,16 @@ body {
     .process-steps {
         grid-template-columns: 1fr;
     }
+    
+    .solution-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .solution-image {
+        height: 200px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1163,5 +1225,16 @@ body {
     .cta-button.primary {
         padding: 12px 24px;
         font-size: 1rem;
+    }
+    
+    .solution-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .solution-image {
+        height: 300px;
     }
 }
