@@ -413,7 +413,7 @@
 
     .solution-image {
         width: 100%;
-        height: 420px;
+        height: 450px;
         object-fit: cover;
         border-radius: 18px;
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
@@ -694,10 +694,22 @@
     }
 
     .faq-answer {
-        padding: 0 1.5rem 1.5rem;
+        padding: 0 1.5rem;
         color: var(--text-light);
         line-height: 1.5;
         font-size: 0.9rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 1.5rem 1.5rem;
+        max-height: 500px;
+    }
+
+    .faq-item.active .faq-question i {
+        transform: rotate(180deg);
     }
 
     /* Contact Section */

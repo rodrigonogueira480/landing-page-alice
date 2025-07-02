@@ -967,10 +967,22 @@
     }
 
     .faq-answer {
-        padding: 0 2rem 2rem;
+        padding: 0 2rem;
         color: var(--text-light);
         line-height: 1.7;
         font-size: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 2rem 2rem;
+        max-height: 500px;
+    }
+
+    .faq-item.active .faq-question i {
+        transform: rotate(180deg);
     }
 
     /* Contact Section */
