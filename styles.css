@@ -144,6 +144,8 @@ body {
 
 .hero-content {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 3rem;
 }
@@ -162,42 +164,55 @@ body {
 
 .hero-image {
     position: relative;
+    width: 100%; 
+    height: 100%;
+    padding: 100px; 
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    overflow: hidden;
+}   
 
+/* Efeito animado atrás da imagem */
 .hero-image::before {
     content: '';
     position: absolute;
-    width: 220px;
-    height: 220px;
+    width: 65%;
+    height: 65%;  
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    border-radius: 50%;
     z-index: 1;
     animation: pulse 3s ease-in-out infinite;
 }
 
 .hero-image img {
-    width: 200px;
-    height: 200px;
+    position: relative; 
+    max-width: 70%;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    object-fit: cover;
-    object-position: center 15%;
-    position: relative;
-    z-index: 2;
-    border: 6px solid var(--white);
+    z-index: 2; 
+    border: 4px solid var(--white);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
+    object-fit: cover;
+    object-position: center;
+    transition: 0.4s ease-in-out ;
 }
 
-.hero-image:hover img {
-    transform: scale(1.05);
+/* Hover opcional */
+.hero-image img:hover {
+    transform: scale(1.04);
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.05); opacity: 0.9; }
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
 }
 
 .hero h1 {
@@ -1020,10 +1035,16 @@ body {
         gap: 2rem;
     }
     
-    .hero-image img {
-        width: 250px;
-        height: 250px;
+    .hero-image {
+        width: 600px;
+        height: 600px;
     }
+
+    .hero-image::before {
+    width: 40%;
+    height: 40%;  
+}
+
     
     .professional-info {
         width: calc(100% - 20px);
